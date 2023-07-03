@@ -26,6 +26,7 @@ public class HouseRobber {
 
     public static int Rob(int[] array){
         int richest = RichestHouse(array);
+        return 0;
 
     }
 
