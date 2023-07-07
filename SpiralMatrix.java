@@ -6,7 +6,7 @@ class SpiralMatrix {
         int[][] matrix = { { 1, 2, 3, 5 },
                 { 4, 5, 6, 5 },
                 { 7, 8, 9, 5 },
-                { 10, 11, 12, 12 } };
+                { 6, 6, 6, 6 } };
         System.out.println(matrix.length);
         int[] spiraled = spiralOrder(matrix);
         System.out.println(Arrays.toString(spiraled));
@@ -43,7 +43,7 @@ class SpiralMatrix {
 
             if (IsEmpty(arr)) {
                 for (int j = start + 1; j < height; j++) {
-                    arr[index] = matrix[j][height - 1];
+                    arr[index] = matrix[j][breadth - 1];
                     if (index < arr.length - 1) {
                         index++;
                     } else {
@@ -64,7 +64,7 @@ class SpiralMatrix {
             }
 
             if (IsEmpty(arr)) {
-                for (int j2 = breadth - 2; j2 > 0; j2--) {
+                for (int j2 = height - 2; j2 > 0; j2--) {
                     arr[index] = matrix[j2][start];
                     if (index < arr.length - 1) {
                         index++;
